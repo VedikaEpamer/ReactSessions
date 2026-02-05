@@ -13,16 +13,38 @@ import UseReducerHook1 from "./hooks/UseReducerHook1";
 import UseEffect from "./hooks/UseEffect";
 import { UseLayout } from "./hooks/UseLayout";
 import { UseRef } from "./hooks/UseRef";
+import BlobLayout from "./assignments/Day1/BlobLayout";
+import { blogs } from "./assignments/Day1/blog";
+import BlogPost from "./assignments/Day1/BlogPost";
+import TodoMain from "./assignments/Day2/TodoMain";
 
 function App() {
   return (
     <>
+      {/* Assignments */}
+      {/* <BlobLayout title="Simple Blog App">
+        {blogs.length > 0 ? (
+          blogs.map((blog) => (
+            <BlogPost
+              key={blog.id}
+              title={blog.title}
+              content={blog.content}
+              isPublished={blog.isPublished}
+            />
+          ))
+        ) : (
+          <p>No blog posts available.</p>
+        )}
+      </BlobLayout> */}
+      <TodoMain />
+      {/* Assignments */}
+
       {/* <WhyHooks /> */}
       {/* <UseStateHooks /> */}
       {/* <ToDoList /> */}
       {/* <UseReducerHook /> */}
       {/* <UseReducerHook1 /> */}
-      <UseEffect />
+      {/* <UseEffect /> */}
       {/* <UseLayout /> */}
       {/* <UseRef /> */}
     </>
