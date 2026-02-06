@@ -27,8 +27,8 @@ const UseEffect = () => {
       <input type="text" value={val} onChange={(e) => setVal(e.target.value)} />
       <button onClick={() => setToggle((prev) => !prev)}>Toggle Temp</button>
 
-      {/* {toggle && <Temp key={val} val={val} />} */}
       {toggle && <TempParent val={val} />}
+      {/* {toggle && <TempParent key={val} val={val} />} */}
     </>
   );
 };

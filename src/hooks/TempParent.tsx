@@ -14,6 +14,7 @@ const TempParent = ({ val }: { val: string }) => {
     <>
       <div>TempParent</div>
       <Temp val={val} />
+      {/* <Temp key={val} val={val} /> */}
     </>
   );
 };
