@@ -18,6 +18,10 @@ import { blogs } from "./assignments/Day1/blog";
 import BlogPost from "./assignments/Day1/BlogPost";
 import TodoMain from "./assignments/Day2/TodoMain";
 import UseRef1 from "./hooks/UseRef1";
+import UseForwardRef from "./hooks/UseForwardRef";
+import Theme from "./hooks/Theme";
+import UseCustomHook from "./hooks/UseCustomHook";
+import UseMemo from "./hooks/UseMemo";
 
 function App() {
   return (
@@ -48,7 +52,13 @@ function App() {
       {/* <UseEffect /> */}
       {/* <UseLayout /> */}
       {/* <UseRef /> */}
-      <UseRef1 />
+      {/* <UseRef1 /> */}
+      {/* <UseEffect /> */}
+      {/* <UseForwardRef /> */}
+
+      {/* <Theme /> */}
+      {/* <UseCustomHook /> */}
+      <UseMemo />
     </>
   );
 }

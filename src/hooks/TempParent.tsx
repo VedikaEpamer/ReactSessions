@@ -13,7 +13,7 @@ const TempParent = ({ val }: { val: string }) => {
   return (
     <>
       <div>TempParent</div>
-      <Temp key={val} val={val} />
+      <Temp val={val} />
     </>
   );
 };

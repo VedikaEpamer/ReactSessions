@@ -6,15 +6,16 @@ const UseEffect = () => {
   const [val, setVal] = useState("");
   const [toggle, setToggle] = useState<boolean>(true);
 
-  useEffect(() => {
-    console.log("always Parent component loaded");
-  });
-  useEffect(() => {
-    console.log("Parent component loaded");
-    return () => {
-      console.log("Parent component unloaded");
-    };
-  }, []);
+  //   useEffect(() => {
+  //     console.log("always Parent component loaded");
+  //   });
+
+  //   useEffect(() => {
+  //     console.log("Parent component loaded");
+  //     return () => {
+  //       console.log("Parent component unloaded");
+  //     };
+  //   }, []);
 
   useEffect(() => {
     console.log("Value1 changed:", val);
@@ -27,7 +28,7 @@ const UseEffect = () => {
       <button onClick={() => setToggle((prev) => !prev)}>Toggle Temp</button>
 
       {/* {toggle && <Temp key={val} val={val} />} */}
-      {toggle && <TempParent key={val} val={val} />}
+      {toggle && <TempParent val={val} />}
     </>
   );
 };

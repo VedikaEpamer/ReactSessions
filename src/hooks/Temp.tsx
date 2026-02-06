@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 
 const Temp = ({ val }: { val: string }) => {
   useEffect(() => {
-    console.log("Temp Component loaded");
+    console.log("Temp Child Component loaded");
 
     return () => {
-      console.log("Temp Component unloaded");
+      console.log("Temp child Component unloaded");
     };
   });
 
