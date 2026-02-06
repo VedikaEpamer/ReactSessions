@@ -5,7 +5,7 @@ interface List {
   completed: boolean;
 }
 
-const UseReducerHook = () => {
+const UseReducer = () => {
   const toDos: List[] = [
     {
       title: "Learn Typescript",
@@ -56,7 +56,7 @@ const UseReducerHook = () => {
 
   return (
     <>
-      <div>UseReducerHook</div>
+      <div>UseReducer</div>
       Add todo :
       <input
         type="text"
@@ -84,4 +84,4 @@ const UseReducerHook = () => {
   );
 };
 
-export default UseReducerHook;
+export default UseReducer;

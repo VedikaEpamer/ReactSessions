@@ -6,7 +6,7 @@ interface Student {
   subjects: string[];
 }
 
-const UseStateHooks = () => {
+const UseStates = () => {
   const initValue: number = 100;
 
   const [toggle, setToggle] = useState<boolean>(false);
@@ -37,7 +37,7 @@ const UseStateHooks = () => {
 
   return (
     <>
-      <div>UseStateHooks</div>
+      <div>UseStates</div>
       <div>Value:{value}</div>
       <button onClick={() => ChangeValue()}>Change Value</button>
       <br />
@@ -80,4 +80,4 @@ const UseStateHooks = () => {
   );
 };
 
-export default UseStateHooks;
+export default UseStates;

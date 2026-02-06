@@ -13,7 +13,7 @@ const ActionType = {
   Clear: "Clear",
 };
 
-const UseReducerHook1 = () => {
+const UseReducer1 = () => {
   const reducer = (state: Calc, action: { type: string }): Calc => {
     switch (action.type) {
       case ActionType.Add:
@@ -41,7 +41,7 @@ const UseReducerHook1 = () => {
 
   return (
     <>
-      <div>UseReducerHook1</div>
+      <div>UseReducer1</div>
       Number 1:
       <input
         type="text"
@@ -78,4 +78,4 @@ const UseReducerHook1 = () => {
   );
 };
 
-export default UseReducerHook1;
+export default UseReducer1;
