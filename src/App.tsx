@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -22,6 +22,33 @@ import UseForwardRef from "./hooks/UseForwardRef";
 import Theme from "./hooks/Theme";
 import UseCustomHook from "./hooks/UseCustomHook";
 import UseMemo from "./hooks/UseMemo";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router";
+import Home from "./routes/Home";
+import About from "./routes/About";
+import { CustomNavbar } from "./routes/CustomNavbar";
+import PageNotFound from "./routes/PageNotFound";
+import College from "./routes/College";
+import { Student } from "./routes/Student";
+import Courses from "./routes/Courses";
+import { CollegeNavBar } from "./routes/CollegeNavBar";
+import UserList from "./routes/UserList";
+import UserDetails from "./routes/UserDetails";
+import Department from "./routes/Department";
+import NavigateExample from "./routes/NavigateExample";
+
+import { lazy } from "react";
+import Spinner from "./routes/Spinner";
+
+// const LazyLoadComponent = lazy(() => import("./routes/LazyLoadComponent"));
+
+const LazyLoadComponent = lazy(
+  () =>
+    new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(import("./routes/LazyLoadComponent"));
+      }, 5000);
+    }),
+);
 
 function App() {
   return (
@@ -58,7 +85,37 @@ function App() {
 
       {/* <Theme /> */}
       {/* <UseCustomHook /> */}
-      <UseMemo />
+      {/* <UseMemo /> */}
+
+      <CustomNavbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/login" element={<NavigateExample />} />
+
+        <Route
+          path="/lazy"
+          element={
+            <Suspense fallback={<Spinner />}>
+              <LazyLoadComponent />
+            </Suspense>
+          }
+        />
+
+        <Route path="/users" element={<UserList />} />
+        <Route path="/users/:id/:name" element={<UserDetails />} />
+
+        <Route path="/college" element={<College />}>
+          <Route path="student" element={<Student />} />
+          <Route path="department" element={<Department />} />
+          {/* <Route index element={<Student />} /> */}
+          <Route path="course" element={<Courses />} />
+        </Route>
+
+        <Route path="/*" element={<PageNotFound />} />
+
+        {/* <Route path="/*" element={<Navigate to="/login" />} /> */}
+      </Routes>
     </>
   );
 }

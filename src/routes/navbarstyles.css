@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: aliceblue;
+}
+
+.header ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.active {
+  color: #646cff;
+  font-weight: bold;
+}
+.notActive {
+  color: black;
+  font-weight: bold;
+}
