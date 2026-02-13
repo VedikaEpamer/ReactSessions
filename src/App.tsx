@@ -38,6 +38,8 @@ import NavigateExample from "./routes/NavigateExample";
 
 import { lazy } from "react";
 import Spinner from "./routes/Spinner";
+import PostList from "./apis/PostList";
+import { EditPost } from "./apis/EditPost";
 
 // const LazyLoadComponent = lazy(() => import("./routes/LazyLoadComponent"));
 
@@ -92,6 +94,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<NavigateExample />} />
+        <Route path="/posts" element={<PostList />} />
+        <Route path="/posts/edit/:id" element={<EditPost />} />
 
         <Route
           path="/lazy"

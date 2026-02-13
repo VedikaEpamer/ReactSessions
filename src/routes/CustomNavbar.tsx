@@ -18,6 +18,9 @@ export const CustomNavbar = () => {
             <Link to="/contact">Contact</Link>
           </li>
           <li>
+            <Link to="/posts">Posts</Link>
+          </li>
+          <li>
             <Link to="/college">College</Link>
           </li>
           <li>
