@@ -32,6 +32,9 @@ export const CustomNavbar = () => {
           <li>
             <Link to="/lazy">Lazy Load</Link>
           </li>
+          <li>
+            <Link to="/products">Products</Link>
+          </li>
         </ul>
       </div>
     </div>

@@ -40,6 +40,7 @@ import { lazy } from "react";
 import Spinner from "./routes/Spinner";
 import PostList from "./apis/PostList";
 import { EditPost } from "./apis/EditPost";
+import { AppLayout } from "./reactReduxToolkit/AppLayout";
 
 // const LazyLoadComponent = lazy(() => import("./routes/LazyLoadComponent"));
 
@@ -96,6 +97,7 @@ function App() {
         <Route path="/login" element={<NavigateExample />} />
         <Route path="/posts" element={<PostList />} />
         <Route path="/posts/edit/:id" element={<EditPost />} />
+        <Route element={<AppLayout />} path="/products" />
 
         <Route
           path="/lazy"
