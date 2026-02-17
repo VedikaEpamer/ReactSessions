@@ -35,6 +35,9 @@ export const CustomNavbar = () => {
           <li>
             <Link to="/products">Products</Link>
           </li>
+          <li>
+            <Link to="/productsAdvance">Advance Products</Link>
+          </li>
         </ul>
       </div>
     </div>
